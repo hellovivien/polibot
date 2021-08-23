@@ -5,4 +5,3 @@ neattext
 wordcloud
 pandas
 demoji
-unicodedata
