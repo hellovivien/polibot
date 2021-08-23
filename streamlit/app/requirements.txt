@@ -1,5 +1,5 @@
 streamlit
-snscrape
+git+https://github.com/JustAnotherArchivist/snscrape.git
 pymongo[srv]
 neattext
 wordcloud
