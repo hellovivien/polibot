@@ -1,0 +1,38 @@
+.text{
+    background-color: #F6F8FA;
+    border-radius: 5px;
+    padding: 10px;
+    word-break: break-word;
+    max-height: 300px;
+    overflow:auto;
+}
+
+.label *{
+    float: right;
+    margin-left: 1em;
+    color:white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #3e8366;
+}
+
+.label-name{
+    background-color: #FCE953;
+}
+
+.label-AGIR-E{background-color: #5B17E3;}
+.label-DEM{background-color: #415291;}
+.label-DLF{background-color: #328855;}
+.label-EDS{background-color: #BA7096;}
+.label-FI{background-color: #626539;}
+.label-GDR{background-color: #99A8F7;}
+.label-GE{background-color: #52B62B;}
+.label-LAREM{background-color: #1484CB;}
+.label-LDS{background-color: #248913;}
+.label-LND{background-color: #64AE81;}
+.label-LR{background-color: #BA2261;}
+.label-LT{background-color: #14C55C;}
+.label-RN{background-color: #4E1D74;}
+.label-SOC{background-color: #7C6437;}
+.label-UDI_I{background-color: #9C7621;}
