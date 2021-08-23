@@ -1,1 +1,8 @@
 streamlit
+snscrape
+pymongo[serv]
+neattext
+wordcloud
+pandas
+demoji
+unicodedata
