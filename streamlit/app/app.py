@@ -18,7 +18,7 @@ def main():
 
     client = MongoClient(conf['mongo_uri'])
     db = client.politweet
-    locale.setlocale(locale.LC_ALL, 'fr_FR')
+    locale.setlocale(locale.LC_ALL, 'fr_FR.utf8')
     st.set_page_config(layout="wide")        
     local_css('style.css')
     match = {}

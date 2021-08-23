@@ -1,12 +1,18 @@
 # Start
 
 ## Streamlit
+
+**online**: https://share.streamlit.io/hellovivien/polibot/main/streamlit/app/app.py
+
+**local**:
 ```bash
 cd streamlit/app
 python start.py
 ```
 
 ## API (not ready yet)
+
+**local**:
 ```bash
 cd fastapi/app
 python start.py
