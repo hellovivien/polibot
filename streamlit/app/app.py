@@ -11,7 +11,7 @@ import locale
 
 # load css files
 def local_css(file_name):
-    with open('css/{}'.format(file_name)) as f:
+    with open('streamlit/app/css/{}'.format(file_name)) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 def main():

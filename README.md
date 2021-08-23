@@ -6,16 +6,14 @@
 
 **local**:
 ```bash
-cd streamlit/app
-python start.py
+python streamlit/app/start.py
 ```
 
 ## API (not ready yet)
 
 **local**:
 ```bash
-cd fastapi/app
-python start.py
+python fastapi/app/start.py
 ```
 
 # Data

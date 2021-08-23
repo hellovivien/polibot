@@ -21,5 +21,5 @@ logo = '''
 print(logo)
 while list(env_dict.keys()) != env_keys:
     env_dict = ask_for_params(env_keys)
-sys.argv = ["streamlit", "run", "app.py"]
+sys.argv = ["streamlit", "run", "streamlit/app/app.py"]
 sys.exit(stcli.main())
