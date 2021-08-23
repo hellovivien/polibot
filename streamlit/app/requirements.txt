@@ -5,4 +5,4 @@ neattext
 wordcloud
 pandas
 demoji
-dotenv
+python-dotenv
