@@ -2,6 +2,10 @@ from dotenv import dotenv_values
 import streamlit as st
 
 env_dict = dotenv_values()
+# streamlit
+if 'db_password' not in env_dict:
+    env_dict['db_password'] = st.secrets["db_password"]
+    
 conf = {
     'mongo_uri': 'mongodb+srv://politweet:{}@cluster0.0rn9i.mongodb.net/politweet?retryWrites=true&w=majority'.format(env_dict['db_password']),
     'groups_colors': {'AGIR-E': '#5B17E3', 'DEM': '#415291', 'DLF': '#328855', 'EDS': '#BA7096', 'FI': '#626539', 'GDR': '#99A8F7', 'GE': '#52B62B', 'LAREM': '#1484CB', 'LDS': '#248913', 'LND': '#64AE81', 'LR': '#BA2261', 'LT': '#14C55C', 'RN': '#4E1D74', 'SOC': '#7C6437', 'UDI_I': '#9C7621'},
