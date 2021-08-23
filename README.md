@@ -6,7 +6,7 @@ cd streamlit/app
 python start.py
 ```
 
-## API (test)
+## API (not ready yet)
 ```bash
 cd fastapi/app
 python start.py
@@ -16,21 +16,21 @@ python start.py
 
 ## Political parties
 
-* **AGIR-E**: Agir ensemble\
-* **DEM**: Mouvement Démocrate (MoDem) et Démocrates apparentés\
-* **DLF**: Debout la France\
-* **EDS**: Écologie démocratie solidarité\
-* **FI**: La France insoumise\
-* **GDR**: Gauche démocrate et républicaine\
-* **GE**: Génération Écologie\
-* **LAREM**: La République en Marche\
-* **LDS**: Ligue du Sud\
-* **LND**: Les Nouveaux Démocrates\
-* **LR**: Les Républicains\
-* **LT**: Libertés et Territoires\
-* **RN**: Rassemblement National\
-* **SOC**: Socialistes et apparentés\
-* **UDI_I**: UDI et Indépendants\
+* **AGIR-E**: Agir ensemble
+* **DEM**: Mouvement Démocrate (MoDem) et Démocrates apparentés
+* **DLF**: Debout la France
+* **EDS**: Écologie démocratie solidarité
+* **FI**: La France insoumise
+* **GDR**: Gauche démocrate et républicaine
+* **GE**: Génération Écologie
+* **LAREM**: La République en Marche
+* **LDS**: Ligue du Sud
+* **LND**: Les Nouveaux Démocrates
+* **LR**: Les Républicains
+* **LT**: Libertés et Territoires
+* **RN**: Rassemblement National
+* **SOC**: Socialistes et apparentés
+* **UDI_I**: UDI et Indépendants
 
 ## Database fields
 
