@@ -18,7 +18,7 @@ def main():
 
     client = MongoClient(conf['mongo_uri'])
     db = client.politweet
-    locale.setlocale(locale.LC_ALL, 'fr_FR.utf8')
+    # locale.setlocale(locale.LC_ALL, 'fr_FR.utf8') # todo fix for linux
     st.set_page_config(layout="wide")        
     local_css('style.css')
     match = {}
@@ -77,7 +77,7 @@ def main():
     start_pagination = (page_number-1)*tweets_by_page
     end_pagination = start_pagination + tweets_by_page
     for tweet in tweets[start_pagination:end_pagination]:       
-        st.markdown('<small>**{}** le {}</small>'.format(tweet['account_first_name']+' '+tweet['account_last_name'],tweet['date'].strftime('%A %d/%m/%Y à %H:%M:%S')), unsafe_allow_html=True)
+        st.markdown('<small>**{}** | {}</small>'.format(tweet['account_first_name']+' '+tweet['account_last_name'],tweet['date'].strftime('%A %d/%m/%Y à %H:%M:%S')), unsafe_allow_html=True)
         st.markdown('{}'.format(tweet['content']))
         st.write("""
         <div class='label'>
