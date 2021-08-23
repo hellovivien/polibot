@@ -1,6 +1,6 @@
 streamlit
 snscrape
-pymongo[serv]
+pymongo[srv]
 neattext
 wordcloud
 pandas
