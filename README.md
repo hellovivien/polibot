@@ -17,12 +17,10 @@ python fastapi/app/start.py
 ```
 # Cleaner
 
-Cleaning class is in /streamlit/app/cleaner.py
-some examples can be found in /streamlit/app/notebooks/cleaning.ipynb
-you can pass dataframe, list or text
-you can construct a clean pipeline which execute some cleaning tasks.
-base_pipeline which is always executed is ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces'].
-next you can add your own chain of functions
+Cleaning class : https://github.com/hellovivien/polibot/blob/main/streamlit/app/cleaner.py\
+Some examples : https://github.com/hellovivien/polibot/blob/main/streamlit/app/notebooks/cleaning.ipynb\
+You can pass dataframe, list or text.\
+base_pipeline which is always executed is ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces'].\
 
 **usage**
 ```py
