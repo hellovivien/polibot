@@ -3,7 +3,7 @@ import neattext as nt
 import demoji
 import unicodedata
 from pymongo import MongoClient
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import re
 import nltk
 from nltk.tokenize import word_tokenize
@@ -47,7 +47,7 @@ class Cleaner():
         if len(base_pipeline)>0:
             self.base_pipeline = base_pipeline
         else:
-            self.base_pipeline = ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces']        
+            self.base_pipeline = ['lowercase', 'fix_escape', 'urls', 'html_tags', 'emails', 'multiple_spaces']        
 
         self.cleaning_func = {
             "lowercase": self.lowercase,
@@ -100,10 +100,13 @@ class Cleaner():
         return re.sub(regex, " ", input)
 
     def remove_html_tags(self, input):
-        return BeautifulSoup(input,"html.parser",from_encoding='utf-8').get_text()          
+        return nt.remove_html_tags(input)
+        # return BeautifulSoup(input,"html.parser",from_encoding='utf-8').get_text() #too slow          
 
     def remove_emoji(self, input):
-        return demoji.replace(nt.remove_emojis(input), "")
+        input = nt.remove_emojis(input)
+        # return demoji.replace(input, "")
+        return input
 
     def replace_emoji(self, input):
         return demoji.replace_with_desc(input, sep="")
