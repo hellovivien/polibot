@@ -165,3 +165,7 @@ pipeline = [{'$lookup':
             {'$project': {'_id':0, 'content':1, 'followersCount': '$account.followersCount'}}]
 cursor = db.tweets.aggregate(pipeline)
 ```
+
+# Model
+
+https://colab.research.google.com/drive/1UCPe5jJpN9OfMBrdmM0DUqkpPgPG9kir#scrollTo=lQr1iqYZ2M1d
