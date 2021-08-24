@@ -15,6 +15,33 @@ python streamlit/app/start.py
 ```bash
 python fastapi/app/start.py
 ```
+# Cleaner
+
+Cleaning class is in /streamlit/app/cleaner.py
+some examples can be found in /streamlit/app/notebooks/cleaning.ipynb
+you can pass dataframe, list or text
+you can construct a clean pipeline which execute some cleaning tasks.
+base_pipeline which is always executed is ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces'].
+next you can add your own chain of functions
+
+**usage**
+```py
+from cleaner import Cleaner
+
+# base
+cleaner = Cleaner(df)
+cleaner.clean()
+cleaner.input # get clear df/list/text
+
+# custom pipeline
+cleaner.reset() # back to dirty text
+soft_pipeline = ["emoji", "numbers", "dates", "non_asci", "fr_stopwords", "multiple_spaces"]
+antitag_pipeline = ["userhandles", "hashtags"] + soft_pipeline
+stemming_pipeline = ["emoji", "special_characters", "numbers", "fr_stopwords", "stemming_fr", "multiple_spaces"]
+cleaner.clean(soft_pipeline)
+cleaner.input
+```
+
 
 # Data
 
