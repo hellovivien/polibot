@@ -1,5 +1,7 @@
 # Start
 
+/!\ you must be in root folder and use start.py (not streamlit run or uvicorn) as below:
+
 ## Streamlit
 
 **online**: https://share.streamlit.io/hellovivien/polibot/main/streamlit/app/app.py
