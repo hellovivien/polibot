@@ -17,10 +17,11 @@ python fastapi/app/start.py
 ```
 # Cleaner
 
-Cleaning class : https://github.com/hellovivien/polibot/blob/main/streamlit/app/cleaner.py\
-Some examples : https://github.com/hellovivien/polibot/blob/main/streamlit/app/notebooks/cleaning.ipynb\
-You can pass dataframe, list or text.\
-base_pipeline which is always executed is ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces'].\
+Cleaning class : https://github.com/hellovivien/polibot/blob/main/streamlit/app/cleaner.py
+
+Some examples : https://github.com/hellovivien/polibot/blob/main/streamlit/app/notebooks/cleaning.ipynb
+
+You can pass dataframe, list or text. base_pipeline which is always executed is ['lowercase', 'fix_escape', 'html_tags', 'urls', 'emails', 'multiple_spaces'].
 
 **usage**
 ```py
