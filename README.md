@@ -1,6 +1,13 @@
 # Start
 
-/!\ you must be in root folder and use start.py (not streamlit run or uvicorn) as below:
+## Docker
+
+```bash
+docker-compose up
+```
+
+**fastapi**: http://localhost:8080/predict/chat
+**streamlit**: http://localhost:8501/
 
 ## Streamlit
 
@@ -8,14 +15,29 @@
 
 **local**:
 ```bash
-python streamlit/app/start.py
+cd streamlit
+stramlit run app/start.py
 ```
 
-## API (not ready yet)
+## API
+
+### endpoints
+
+```py
+https://fastapi-hellovivien.cloud.okteto.net/predict/<input>
+
+{"input":"<input>","position":"droite","droite":0.6176422938729598,"gauche":0.3823577061270402}
+```
+```py
+https://fastapi-hellovivien.cloud.okteto.net/predict/account/ZardozD
+
+{"account_name":"ZardozD","num_of_tweets":11,"score_gauche":0.4217312843019607,"score_droite":0.5782687156980393,"position":"droite","date":"2021-08-25T11:43:26.066567"}
+```
 
 **local**:
 ```bash
-python fastapi/app/start.py
+cd fastapi
+python app/start.py
 ```
 # Cleaner
 

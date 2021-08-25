@@ -1,4 +1,8 @@
 fastapi
 uvicorn
 python-multipart
+
 sklearn
+git+https://github.com/JustAnotherArchivist/snscrape.git
+pymongo[srv]
+python-dotenv
