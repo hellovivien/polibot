@@ -9,20 +9,19 @@ from math import ceil
 import locale
 
 
+client = MongoClient(conf['mongo_uri'])
+db = client.politweet
+
 # load css files
 def local_css(file_name):
     with open('app/css/{}'.format(file_name)) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
-def main():
+def menu_polibot():
+    st.write('en construction')
 
-    client = MongoClient(conf['mongo_uri'])
-    db = client.politweet
-    # locale.setlocale(locale.LC_ALL, 'fr_FR.utf8') # todo fix for linux
-    st.set_page_config(layout="wide")        
-    local_css('style.css')
+def menu_polibase():
     match = {}
-
     # accounts widget
     accounts = db.accounts.find({},{'first_name':1, 'last_name':1, 'group':1}).sort('last_name')
     current_accounts = st.sidebar.multiselect('Account', accounts, format_func=lambda x: "{} {}".format(x['last_name'], x['first_name']))
@@ -66,9 +65,6 @@ def main():
     if current_groups and (not current_binary and not current_positions):
         values = [group['value'] for group in current_groups]
         match['group'] = {'$in': values}
-        
-    
-
     tweets_by_page = 50
     tweets = db.tweets.find(match).sort('date', -1)
     tweet_count = tweets.count()
@@ -86,8 +82,22 @@ def main():
         </div>
         """.format(tweet['url'], tweet['group'], tweet['group']), unsafe_allow_html=True)
         st.write('<hr />',  unsafe_allow_html=True)
-    
 
+
+def main():
+    # locale.setlocale(locale.LC_ALL, 'fr_FR.utf8') # todo fix for linux
+    st.set_page_config(layout="wide")        
+    local_css('style.css')
+
+    # menu
+    menu_dict = {
+        'Polibase':menu_polibase,
+        'Polibot':menu_polibot,
+    }
+    menu_choice = st.sidebar.radio("menu", list(menu_dict.keys()))
+    if menu_choice:
+        menu_dict[menu_choice]()
+    
 if __name__ == '__main__':
     main()
 

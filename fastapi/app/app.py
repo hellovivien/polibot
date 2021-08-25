@@ -36,7 +36,7 @@ def scrape_account(account_name, max_tweets=10):
     total_droite = 0
     print(match)
     for i,tweet in enumerate(sntwitter.TwitterSearchScraper(match).get_items()):
-        if max_tweets is not None and i > max_tweets:
+        if max_tweets is not None and max_tweets != 'all' and i > max_tweets:
             break
         print(tweet.user.username)
         prediction = predict(tweet.content)
@@ -84,9 +84,9 @@ def predict(input):
 def predict_input(input: str):
     return predict(input)
 
-@app.get("/predict/account/{account_name}")
-def predict_account(account_name: str):
-    return scrape_account(account_name)
+@app.get("/predict/account/{account_name}/{num}")
+def predict_account(account_name: str, num = 10):
+    return scrape_account(account_name, num)
 
     
 
