@@ -4,6 +4,7 @@
 ```bash
 python start.py
 ```
+**next** you can use docker-compose.
 
 ## Docker
 
