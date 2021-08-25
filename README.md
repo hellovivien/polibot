@@ -12,7 +12,7 @@ docker-compose up
 
 ## Streamlit
 
-**online**: https://share.streamlit.io/hellovivien/polibot/main/streamlit/app/app.py
+**online**: https://streamlit-hellovivien.cloud.okteto.net
 
 **local**:
 ```bash
