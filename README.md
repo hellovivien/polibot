@@ -7,6 +7,7 @@ docker-compose up
 ```
 
 **fastapi**: http://localhost:8080/predict/chat
+
 **streamlit**: http://localhost:8501/
 
 ## Streamlit
@@ -26,12 +27,12 @@ stramlit run app/start.py
 ```py
 https://fastapi-hellovivien.cloud.okteto.net/predict/<input>
 
-{"input":"<input>","position":"droite","droite":0.6176422938729598,"gauche":0.3823577061270402}
+# {"input":"<input>","position":"droite","droite":0.6176422938729598,"gauche":0.3823577061270402}
 ```
 ```py
 https://fastapi-hellovivien.cloud.okteto.net/predict/account/ZardozD
 
-{"account_name":"ZardozD","num_of_tweets":11,"score_gauche":0.4217312843019607,"score_droite":0.5782687156980393,"position":"droite","date":"2021-08-25T11:43:26.066567"}
+# {"account_name":"ZardozD","num_of_tweets":11,"score_gauche":0.4217312843019607,"score_droite":0.5782687156980393,"position":"droite","date":"2021-08-25T11:43:26.066567"}
 ```
 
 **local**:
