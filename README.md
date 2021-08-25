@@ -1,5 +1,10 @@
 # Start
 
+**first** :
+```bash
+python start.py
+```
+
 ## Docker
 
 ```bash
