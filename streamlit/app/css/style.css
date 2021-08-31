@@ -21,6 +21,23 @@
     background-color: #FCE953;
 }
 
+.scores{
+    font-size: 5em;
+    text-align: center;
+}
+
+.score-gauche{
+    color: #64AC51 !important;
+}
+
+.score-droite{
+    color: #E85468 !important;
+}
+
+
+.label-droite{background-color:#E85468}
+.label-gauche{background-color:#64AC51}
+
 .label-AGIR-E{background-color: #5B17E3;}
 .label-DEM{background-color: #415291;}
 .label-DLF{background-color: #328855;}

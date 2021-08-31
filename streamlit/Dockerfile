@@ -6,4 +6,4 @@ RUN pip install -r app/requirements.txt
 RUN mkdir -p /root/.streamlit
 RUN bash -c 'echo -e "[general]\nemail = \"your-email@domain.com\"\n" > /root/.streamlit/credentials.toml'
 ENTRYPOINT ["streamlit", "run"]
-CMD ["app/app.py"]
+CMD ["app/main.py"]

@@ -23,7 +23,7 @@ docker-compose up
 **local**:
 ```bash
 cd streamlit
-stramlit run app/start.py
+stramlit run app/main.py
 ```
 
 ## API
