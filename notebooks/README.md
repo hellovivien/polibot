@@ -2,7 +2,7 @@
 
 **Notebooks d'exploration des données : text-processing-dataviz.ipynb + hashtags.ipynb**
 
-Pour différencier l'usage de certains termes nous avons différencié trois catgéories : **hashtags, userhandles et mots clés**. Pour prendre en considération le désiquilibre de classes droite-gauche-centre, le décompte (count) a été **normalisé**, il s'agit de la fréquence.
+Pour différencier l'usage de certains termes nous avons différencié trois catégories : **hashtags, userhandles et mots clés**. Pour prendre en considération le déséquilibre de classes droite-gauche-centre, le décompte (count) a été **normalisé**, il s'agit de la fréquence.
 
 En ce qui concerne les hashtags, on constate que le hastags neutre #directan est utilisé à la même fréquence par les trois bords. **#covid19** est plus utilisé par le centre, puis la droite et la gauche.
 
