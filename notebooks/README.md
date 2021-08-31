@@ -1,3 +1,5 @@
+**Modèles BERT : popolibot_model_camembert.ipynb**
+
 **Notebooks d'exploration des données : text-processing-dataviz.ipynb + hashtags.ipynb**
 
 Pour différencier l'usage de certains termes nous avons différencié trois catgéories : **hashtags, userhandles et mots clés**. Pour prendre en considération le désiquilibre de classes droite-gauche-centre, le décompte (count) a été **normalisé**, il s'agit de la fréquence.
